@@ -1,0 +1,29 @@
+# 🧠 快速认知工具 (Fast Cognition)
+
+一个基于大语言模型（LLM）驱动的结构化知识生成与管理系统。
+只需输入一个主题和分类方法论，系统即可自动生成多层级的“认知树”，并调用大模型填充具体内容（方法论、输入信息、输出信息）。支持云端 API 与本地模型，支持数据的导入与导出。
+
+<img width="2502" height="1352" alt="image" src="https://github.com/user-attachments/assets/1a01cb6e-4e0c-4f79-88dc-852ebf31221d" />
+
+## ✨ 核心功能
+
+- **🌳 自动化认知树生成**：根据设定的层数和分支数，结合你自定义的分类方法论（如“源、道、始、极、空”），自动生成结构化的知识目录。
+- **🤖 双引擎大模型支持**：
+  - 支持云端强推理模型（如 DeepSeek V4-Pro）。
+  - 支持本地私有化部署（通过 Ollama 运行 Qwen 等本地模型）。
+- **📝 结构化内容解析**：点击任意节点，大模型将严格按照「方法论、输入信息、输出信息」三个维度生成 Markdown 格式的深度解析。
+- **⏯️ 批量控制**：一键生成全部节点内容，并支持随时暂停/继续，实时查看生成进度与日志。
+- **💾 数据互通**：支持将当前认知树打包导出为 `.zip` 压缩包，也可随时导入恢复。
+
+## 🛠️ 技术栈
+
+- **前端**：React 18 + Vite + TailwindCSS + React Markdown
+- **后端**：Python 3.10+ + FastAPI + OpenAI SDK
+- **本地模型**：Ollama (兼容 OpenAI API 格式)
+
+## 🚀 本地运行指南
+
+### 1. 克隆项目
+```bash
+git clone https://github.com/pentacle-lord/fast-cognition.git
+cd fast-cognition
